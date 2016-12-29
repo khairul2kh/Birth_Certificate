@@ -23,6 +23,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import java.util.Map;
+import javax.validation.Valid;
 //import org.openmrs.module.birthcertificate.BirthCertificate;
 import org.openmrs.module.birthcertificate.api.BirthCertificateService;
 import org.openmrs.module.birthcertificate.model.BirthRegistration;
@@ -54,7 +55,7 @@ public class BirthCertificateManageController {
     BirthCertificateService birthCertificateService;
 
     @RequestMapping(value = "/module/birthcertificate/main.form", method = RequestMethod.POST)
-    public String addCerficate(@ModelAttribute("birthRegistration") BirthRegistration birthRegistration, BindingResult result) {
+    public String addCerficate(@ModelAttribute("birthRegistration") @Valid BirthRegistration birthRegistration, BindingResult result) {
         User u = Context.getAuthenticatedUser();
         birthRegistration.setCreator(u);
         birthRegistration.setCreatedDate(new Date());
@@ -82,7 +83,7 @@ public class BirthCertificateManageController {
     }
 
     @RequestMapping(value = "/module/birthcertificate/update.form", method = RequestMethod.POST)
-    public String updateCerficate(@ModelAttribute(value = "birthRegistration") BirthRegistration birthRegistration, BindingResult result) {
+    public String updateCerficate(@ModelAttribute(value = "birthRegistration") @Valid BirthRegistration birthRegistration, BindingResult result) {
         birthCertificateService.updatebirthCertificate(birthRegistration);
         
         return "module/birthcertificate/main/printBirthCertificate";

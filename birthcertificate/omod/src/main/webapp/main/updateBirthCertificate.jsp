@@ -249,19 +249,20 @@
 
                
             </table>
-			
-			<div class="form-group">
-                        <div class="row">
-                            <div class="form-actions floatMiddle">
+			 
+						  <div class="row">
+                            <div class="form-actions floatRight">
                                 <button type="submit" class="btn btn-primary">
-                                    <span class="fa fa-floppy-o fa-lg"></span> Update
+                                    <span>Update <i class="fa fa-floppy-o fa-lg" aria-hidden="true"></i> </span>
                                 </button>                           
 
-                               
+                                 <button type="button" class="btn btn-warning" onclick="javascript:history.go(-1)">
+		  <span>Back <i class="fa fa-refresh" aria-hidden="true"></i> </span>
+         </button>
+
                             </div>
                         </div>
-						 </div>
-						
+			
         </f:form>
     </center>
 

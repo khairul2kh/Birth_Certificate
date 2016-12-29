@@ -82,7 +82,12 @@
         </dependency>
 		
         <!-- End OpenMRS core -->
-         
+        <dependency>
+            <groupId>javax.validation</groupId>
+            <artifactId>validation-api</artifactId>
+            <version>1.1.0.Final</version>
+            <type>jar</type>
+        </dependency>
     </dependencies>
 
     <build>
