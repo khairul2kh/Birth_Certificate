@@ -115,156 +115,156 @@
 
 
     <center>
-       <div class="generic-container">
+        <div class="generic-container">
             <div class="panel panel-default">
                 <div class="panel-heading"><span class="lead">Update Birth Certificate Information </span></div>
                 <div class="formcontainer">
-        <f:form action="update.form" modelAttribute="id" class="form-horizontal">
-            <table  class="table table-bordered">
-                <input type="hidden" name="id" value="${birthRegistration.id}" />
+                    <f:form action="update.form" modelAttribute="id" class="form-horizontal">
+                        <table  class="table table-bordered">
+                            <input type="hidden" name="id" value="${birthRegistration.id}" />
 
-              <div class="row">
-                            <div class="form-group col-md-12">
-                                <label class="control-label col-sm-4" for="memo">Memo No: MCHTI/Azim:/Birth/</label>
-                                <div class="col-md-7">
-                                    <input type="text" style="padding-left:10px;" name="memoNo" value="${birthRegistration.memoNo}" id="memoNo" class="form-control input-sm"/>
+                            <div class="row">
+                                <div class="form-group col-md-12">
+                                    <label class="control-label col-sm-4" for="memo">Memo No: MCHTI/Azim:/Birth/</label>
+                                    <div class="col-md-7">
+                                        <input type="text" style="padding-left:10px;" name="memoNo" value="${birthRegistration.memoNo}" id="memoNo" class="form-control input-sm"/>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="row">
-                            <div class="form-group col-md-12 has-feedback">
-                                <label class="control-label col-sm-4" >Date :</label>
-                                <div class="col-md-3">
-								
-								 <input type="text" style="padding-left:10px;" name = "date" id="date" class="username form-control input-sm" value = "<fmt:formatDate value="${birthRegistration.date}" pattern="dd/MM/yyyy"/>"/>
-								
-                                                                         
-                                    <span class="glyphicon glyphicon-calendar form-control-feedback icon-success" ></span>
+                            <div class="row">
+                                <div class="form-group col-md-12 has-feedback">
+                                    <label class="control-label col-sm-4" >Date :</label>
+                                    <div class="col-md-3">
+
+                                        <input type="text" style="padding-left:10px;" name = "date" id="date" class="username form-control input-sm" value = "<fmt:formatDate value="${birthRegistration.date}" pattern="dd/MM/yyyy"/>"/>
+
+
+                                        <span class="glyphicon glyphicon-calendar form-control-feedback icon-success" ></span>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-						
-						 <div class="row">
-                            <div class="form-group col-md-12">
-                                <label class="control-label col-sm-4" for="regNo">Registration No :</label>
-                                <div class="col-md-7">
-                                    <input type="text" style="padding-left:10px;" name="registrationNo" value="${birthRegistration.registrationNo}"  id="registrationNo" class="form-control input-sm"/>
-                                </div>
-                            </div> 
-                        </div>
 
-                        <div class="row">
-                            <div class="form-group col-md-12 has-feedback">
-                                <label class="control-label col-sm-4">Name :</label>
-                                <div class="col-md-4">
-                                    <input type="text" style="padding-left:10px;" name="name" value="${birthRegistration.name}" id="name" class="username form-control input-sm"/>                  
-
-                                </div>
-                                <label class="control-label col-md-1" for="sex">Sex :</label>
-                                <div class="col-md-2">
-                                    <select class="form-control cursor-pointer" name="sex"  value="${birthRegistration.sex}" id="sex">
-                                        <option value="Male"> Male</option>
-                                        <option value="Female"> Female</option>
-                                        <option value="Transgender">Transgender</option>
-                                    </select>
-                                </div>
-
+                            <div class="row">
+                                <div class="form-group col-md-12">
+                                    <label class="control-label col-sm-4" for="regNo">Registration No :</label>
+                                    <div class="col-md-7">
+                                        <input type="text" style="padding-left:10px;" name="registrationNo" value="${birthRegistration.registrationNo}"  id="registrationNo" class="form-control input-sm"/>
+                                    </div>
+                                </div> 
                             </div>
-                        </div>
 
-                        <div class="row">
-                            <div class="form-group col-md-12 has-feedback">
-                                 <label class="control-label col-sm-4" >Birth Date :</label>
-                                <div class="col-md-3">
-                                     <input type="text" style="padding-left:10px;" name = "dateOfBirth" id="dateOfBirth" class="username form-control input-sm" value = "<fmt:formatDate value="${birthRegistration.dateOfBirth}" pattern="dd/MM/yyyy"/>"/>                 
-                                    <span class="glyphicon glyphicon-calendar form-control-feedback icon-success" ></span>
+                            <div class="row">
+                                <div class="form-group col-md-12 has-feedback">
+                                    <label class="control-label col-sm-4">Name :</label>
+                                    <div class="col-md-4">
+                                        <input type="text" style="padding-left:10px;" name="name" value="${birthRegistration.name}" id="name" class="username form-control input-sm"/>                  
+
+                                    </div>
+                                    <label class="control-label col-md-1" for="sex">Sex :</label>
+                                    <div class="col-md-2">
+                                        <select class="form-control cursor-pointer" name="sex"  value="${birthRegistration.sex}" id="sex">
+                                            <option value="Male"> Male</option>
+                                            <option value="Female"> Female</option>
+                                            <option value="Transgender">Transgender</option>
+                                        </select>
+                                    </div>
+
                                 </div>
-                                <label class="control-label col-sm-2" for="time">Time of Birth : </label>
-                                <div class="col-md-2">
-                                    <div class="clearfix">
-                                        <div class="input-group clockpicker pull-center" data-placement="left" data-align="top" data-autoclose="true">
-                                            <input type="text" name="timeOfBirth" value="${birthRegistration.timeOfBirth}" class="form-control" value="00:00">
-                                            <span class="input-group-addon">
-                                                <span class="glyphicon glyphicon-time"></span>
-                                            </span>
+                            </div>
+
+                            <div class="row">
+                                <div class="form-group col-md-12 has-feedback">
+                                    <label class="control-label col-sm-4" >Birth Date :</label>
+                                    <div class="col-md-3">
+                                        <input type="text" style="padding-left:10px;" name = "dateOfBirth" id="dateOfBirth" class="username form-control input-sm" value = "<fmt:formatDate value="${birthRegistration.dateOfBirth}" pattern="dd/MM/yyyy"/>"/>                 
+                                        <span class="glyphicon glyphicon-calendar form-control-feedback icon-success" ></span>
+                                    </div>
+                                    <label class="control-label col-sm-2" for="time">Time of Birth : </label>
+                                    <div class="col-md-2">
+                                        <div class="clearfix">
+                                            <div class="input-group clockpicker pull-center" data-placement="left" data-align="top" data-autoclose="true">
+                                                <input type="text" name="timeOfBirth" value="${birthRegistration.timeOfBirth}" class="form-control" value="00:00">
+                                                <span class="input-group-addon">
+                                                    <span class="glyphicon glyphicon-time"></span>
+                                                </span>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+
+                            <div class="row">
+                                <div class="form-group col-md-12">
+                                    <label class="control-label col-sm-4" for="mothersName">Mother's Name : </label>
+                                    <div class="col-md-7">
+                                        <input type="text" style="padding-left:10px;" name="mothersName" value="${birthRegistration.mothersName}" id="mothersName" class="form-control input-sm"/>
+                                    </div>
+                                </div> 
+                            </div>
+
+                            <div class="row">
+                                <div class="form-group col-md-12">
+                                    <label class="control-label col-sm-4" for="nidMoth">NID No : </label>
+                                    <div class="col-md-7">
+                                        <input type="text" style="padding-left:10px;" name="nidMoth" value="${birthRegistration.nidMoth}" id="nidMoth" class="form-control input-sm"/>
+                                    </div>
+                                </div> 
+                            </div>
+
+                            <div class="row">
+                                <div class="form-group col-md-12">
+                                    <label class="control-label col-sm-4" for="fathersName">Father's Name : </label>
+                                    <div class="col-md-7">
+                                        <input type="text" style="padding-left:10px;" name="fathersName" value="${birthRegistration.fathersName}" id="fathersName" class="form-control input-sm"/>
+                                    </div>
+                                </div> 
+                            </div>
+
+                            <div class="row">
+                                <div class="form-group col-md-12">
+                                    <label class="control-label col-sm-4" for="nidFath">NID No : </label>
+                                    <div class="col-md-7">
+                                        <input type="text" style="padding-left:10px;" name="nidFath" value="${birthRegistration.nidFath}" id="nidFath" class="form-control input-sm"/>
+                                    </div>
+                                </div> 
+                            </div>
+
+                            <div class="row">
+                                <div class="form-group col-md-12">
+                                    <label class="control-label col-sm-4" for="presentAdd">Present Address : </label>
+                                    <div class="col-md-7">
+                                        <textarea class="form-control" rows="5" name="presentAdd"><c:out value="${birthRegistration.presentAdd}"/></textarea>
+                                    </div>
+                                </div> 
+                            </div>
+
+                            <div class="row">
+                                <div class="form-group col-md-12">
+                                    <label class="control-label col-sm-4" for="permanentAdd">Permanent Address : </label>
+                                    <div class="col-md-7">
+                                        <textarea class="form-control" rows="5" name="permanentAdd"><c:out value="${birthRegistration.permanentAdd}"/></textarea>
+                                    </div>
+                                </div> 
+                            </div>
+
+
+                        </table>
 
                         <div class="row">
-                            <div class="form-group col-md-12">
-                                <label class="control-label col-sm-4" for="mothersName">Mother's Name : </label>
-                                <div class="col-md-7">
-                                    <input type="text" style="padding-left:10px;" name="mothersName" value="${birthRegistration.mothersName}" id="mothersName" class="form-control input-sm"/>
-                                </div>
-                            </div> 
-                        </div>
-
-                        <div class="row">
-                            <div class="form-group col-md-12">
-                                <label class="control-label col-sm-4" for="nidMoth">NID No : </label>
-                                <div class="col-md-7">
-                                    <input type="text" style="padding-left:10px;" name="nidMoth" value="${birthRegistration.nidMoth}" id="nidMoth" class="form-control input-sm"/>
-                                </div>
-                            </div> 
-                        </div>
-
-                        <div class="row">
-                            <div class="form-group col-md-12">
-                                <label class="control-label col-sm-4" for="fathersName">Father's Name : </label>
-                                <div class="col-md-7">
-                                    <input type="text" style="padding-left:10px;" name="fathersName" value="${birthRegistration.fathersName}" id="fathersName" class="form-control input-sm"/>
-                                </div>
-                            </div> 
-                        </div>
-
-                        <div class="row">
-                            <div class="form-group col-md-12">
-                                <label class="control-label col-sm-4" for="nidFath">NID No : </label>
-                                <div class="col-md-7">
-                                    <input type="text" style="padding-left:10px;" name="nidFath" value="${birthRegistration.nidFath}" id="nidFath" class="form-control input-sm"/>
-                                </div>
-                            </div> 
-                        </div>
-
-                        <div class="row">
-                            <div class="form-group col-md-12">
-                                <label class="control-label col-sm-4" for="presentAdd">Present Address : </label>
-                                <div class="col-md-7">
-                                   <textarea class="form-control" rows="5" name="presentAdd"><c:out value="${birthRegistration.presentAdd}"/></textarea>
-                                </div>
-                            </div> 
-                        </div>
-
-                        <div class="row">
-                            <div class="form-group col-md-12">
-                                <label class="control-label col-sm-4" for="permanentAdd">Permanent Address : </label>
-                                <div class="col-md-7">
-                                    <textarea class="form-control" rows="5" name="permanentAdd"><c:out value="${birthRegistration.permanentAdd}"/></textarea>
-                                </div>
-                            </div> 
-                        </div>
-
-               
-            </table>
-			 
-						  <div class="row">
                             <div class="form-actions floatRight">
                                 <button type="submit" class="btn btn-primary">
                                     <span>Update <i class="fa fa-floppy-o fa-lg" aria-hidden="true"></i> </span>
                                 </button>                           
 
-                                 <button type="button" class="btn btn-warning" onclick="javascript:history.go(-1)">
-		  <span>Back <i class="fa fa-refresh" aria-hidden="true"></i> </span>
-         </button>
+                                <button type="button" class="btn btn-warning" onclick="javascript:history.go(-1)">
+                                    <span>Back <i class="fa fa-refresh" aria-hidden="true"></i> </span>
+                                </button>
 
                             </div>
                         </div>
-			
-        </f:form>
-    </center>
+
+                    </f:form>
+                    </center>
 
                 </div>
             </div>
@@ -274,9 +274,9 @@
     <script>
         jQuery(document).ready(function () {
             $("#date").css('cursor', 'pointer');
-           jQuery('#date').datepicker({yearRange: 'c-30:c+30', dateFormat: 'dd/mm/yy', changeMonth: true, changeYear: true});
+            jQuery('#date').datepicker({yearRange: 'c-30:c+30', dateFormat: 'dd/mm/yy', changeMonth: true, changeYear: true});
             $("#dateOfBirth").css('cursor', 'pointer');
-           jQuery('#dateOfBirth').datepicker({yearRange: 'c-30:c+30', dateFormat: 'dd/mm/yy', changeMonth: true, changeYear: true});
+            jQuery('#dateOfBirth').datepicker({yearRange: 'c-30:c+30', dateFormat: 'dd/mm/yy', changeMonth: true, changeYear: true});
 
         });
 

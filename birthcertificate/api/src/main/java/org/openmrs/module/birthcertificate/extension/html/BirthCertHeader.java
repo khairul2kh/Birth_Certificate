@@ -26,7 +26,7 @@ public class BirthCertHeader extends Extension {
 	}
 
 	public String getUrl() {
-            return "/module/birthcertificate/main.form";
+            return "/module/birthcertificate/home.htm";
 	}
     
 }

@@ -39,6 +39,16 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class BirthCertificateManageController {
 
     protected final Log log = LogFactory.getLog(getClass());
+    
+    @RequestMapping(value = "/module/birthcertificate/home.htm", method = RequestMethod.GET)
+    public String home(HttpServletRequest request, Model model) {
+        
+        User u = Context.getAuthenticatedUser();
+        model.addAttribute("u", u);
+
+        System.out.println(request.getRemoteAddr());
+        return "module/birthcertificate/main/homepage";
+    }
 
     @RequestMapping(value = "/module/birthcertificate/main.form", method = RequestMethod.GET)
     public String main(HttpServletRequest request, Model model) {
@@ -66,7 +76,7 @@ public class BirthCertificateManageController {
     @RequestMapping(value = "/module/birthcertificate/birthView.htm", method = RequestMethod.GET)
     public String listCertificate(Map<String, Object> map,
             @RequestParam(value = "id", required = false) Integer id) {
-        // map.put("registration", new BirthRegistration());
+        
         map.put("birthRegistration", birthCertificateService.getBirthRegById(id));
         return "module/birthcertificate/main/printBirthCertificate";
 

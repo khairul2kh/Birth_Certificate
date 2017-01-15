@@ -12,8 +12,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
-
 import org.openmrs.User;
+import org.hibernate.validator.constraints.NotEmpty;
 
 /**
  *
@@ -27,6 +27,8 @@ public class BirthRegistration {
     @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
+    @NotEmpty
+    @Column(unique=false, nullable=false)
     private String memoNo;
     private Date date;
     private String registrationNo;

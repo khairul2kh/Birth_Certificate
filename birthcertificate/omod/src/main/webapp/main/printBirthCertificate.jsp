@@ -205,10 +205,14 @@
                 <button class="btn btn-success" value="Print" onClick="printDiv3();"> Print  <i class="fa fa-print" aria-hidden="true"></i></button>
 
                 <a class="btn btn-primary" href="edit.form?id=${birthRegistration.id}"><span style="color:#fff;"> Edit <i class="fa fa-pencil-square-o" aria-hidden="true"></i> </span></a>
-<!--                <button type="button" class="btn btn-warning" onclick="javascript:history.go(-1)">
-                    <span></span> Back <i class="fa fa-refresh" aria-hidden="true"></i> </span>
-                </button>-->
-
+                <!--                <button type="button" class="btn btn-warning" onclick="javascript:history.go(-1)">
+                                    <span></span> Back <i class="fa fa-refresh" aria-hidden="true"></i> </span>
+                                </button>-->
+ <a class="btn btn-info btn-lg" href="main.form"><span style="color:#fff;"> Add New Birth Certificate <i class="glyphicon glyphicon-user"></i> </span></a>
+               
+              
+                
+                
             </div>
         </div>
     </div>
@@ -232,146 +236,86 @@
 
 <div id="printDiv" style="">
 
-    <div class="row form-group"></div>
-    <div class='col-xs-3 col-sm-6 col-md-4 col-lg-3'>
+    <hr style="height:18px; visibility:hidden;" />
+    <br><br><br><br><br><br><br><br>
+    <table border=0 width="93%" style="line-height:24px;">
 
-    </div>
-    <div class='col-xs-3 col-sm-6 col-md-4 col-lg-3'>
-        <div>${birthRegistration.memoNo}</div>
-    </div>
+        <tr>
+            <td colspan="2"> </td> 
 
+            <td width="50%" style="text-align:left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <span>${birthRegistration.memoNo}</span></td>
 
-    <div class='col-xs-3 col-sm-6 col-md-4 col-lg-3'>
-    </div>
-
-    <div class='col-xs-3 col-sm-6 col-md-4 col-lg-3'>
-        <div><fmt:formatDate value="${birthRegistration.date}" pattern="dd/MM/yyyy"/></div>
-    </div>
+            <td colspan="1" style="text-align:left"><spa><fmt:formatDate value="${birthRegistration.date}" pattern="dd/MM/yyyy"/></span></td>
 
 
-    <%---///--%>
-    <div class="row form-group"></div>
-    <div class='col-xs-3 col-sm-6 col-md-4 col-lg-3'>
-    </div>
+            </tr>
 
-    <div class='col-xs-3 col-sm-1 col-md-1 col-lg-3'>
-        <div>${birthRegistration.registrationNo}</div>
-    </div>
+            <tr>
 
+                <td colspan="1"></td>
+                <td colspan="3" style="text-align:left;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>${birthRegistration.registrationNo}</span></td>
 
-    <div class='col-xs-3 col-sm-6 col-md-4 col-lg-3'>
-    </div>
+            </tr>
 
-    <div class='col-xs-3 col-sm-6 col-md-4 col-lg-3'>
-        <div><br></div>
-    </div>
+            <tr>
 
+                <td colspan="3" style="text-align:left;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span>${birthRegistration.name}</span></td>
 
-    <%---///--%>
+                <td width="18%"style="text-align:left;"> <span>${birthRegistration.sex}</span></td>
+            </tr>
 
-
-    <div class="row form-group"></div>
-    <div class='col-xs-3 col-sm-6 col-md-4 col-lg-3'>
-    </div>
-
-    <div class='col-xs-3 col-sm-6 col-md-4 col-lg-3'>
-        <div>${birthRegistration.name}</div>
-    </div>
-
-    <div class='col-xs-3 col-sm-6 col-md-4 col-lg-3'>
-        <div></div>
-    </div>
-
-    <div class='col-xs-3 col-sm-6 col-md-4 col-lg-3'>
-        <div>${birthRegistration.sex}</div>
-    </div>
-
-
-    <%---///--%>
-
-    <div class="row form-group"></div>
-    <div class='col-xs-3 col-sm-6 col-md-4 col-lg-3'>
-    </div>
-
-    <div class='col-xs-3 col-sm-6 col-md-4 col-lg-3'>
-        <div><fmt:formatDate value="${birthRegistration.date}" pattern="dd/MM/yyyy"/></div>
-    </div>
-
-    <div class='col-xs-3 col-sm-6 col-md-4 col-lg-3'>
-        <div></div>
-    </div>
-
-    <div class='col-xs-3 col-sm-6 col-md-4 col-lg-3'>
-        <div>${birthRegistration.timeOfBirth}</div>
-    </div>
-
-    <%---///--%>
-
-    <div class="row form-group"></div>
-    <div class='col-xs-3 col-sm-6 col-md-4 col-lg-1'>
-    </div>
-
-    <div class='col-xs-3 col-sm-1 col-md-1 col-lg-5'>
-        <div>${birthRegistration.mothersName}</div>
-    </div>
-   <%---///--%>
-    <div class="row form-group"></div>
-
-    <div class='col-xs-3 col-sm-6 col-md-4 col-lg-3'>
-        <div></div>
-    </div>
-
-    <div class='col-xs-3 col-sm-1 col-md-1 col-lg-3'>
-        <div>${birthRegistration.nidMoth}</div>
-    </div>
-
-        <%---///--%>
-    <div class="row form-group"></div>
-    <div class='col-xs-3 col-sm-6 col-md-4 col-lg-3'> </div>
-
-    <div class='col-xs-3 col-sm-1 col-md-1 col-lg-3'>
-        <div>${birthRegistration.fathersName}</div>
-    </div>
+            <tr>
+                <td colspan="1"></td>
+                <td width="25%" style="text-align:left;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span><fmt:formatDate value="${birthRegistration.dateOfBirth}" pattern="dd/MM/yyyy"/></span></td>
 
 
 
+                <td width="25%"style="text-align:right;"><span>${birthRegistration.timeOfBirth}</span></td>
+            </tr>
 
-    <%---///--%>
-    <div class="row form-group"></div>
-    <div class='col-xs-3 col-sm-6 col-md-4 col-lg-3'>
-    </div>
+            <tr>
+                <td colspan="1"></td>
 
-    <div class='col-xs-3 col-sm-1 col-md-1 col-lg-3'>
-        <div>${birthRegistration.nidFath}</div>
-    </div>
+                <td colspan="3" style="text-align:left;"><span>${birthRegistration.mothersName}</span></td>
 
+            </tr>
 
-    <%---///--%>
+            <tr>
 
-    <div class="row form-group"></div>
-    <div class='col-xs-3 col-sm-6 col-md-4 col-lg-1'></div>
+                <td  colspan="3" style="text-align:left;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;<span>${birthRegistration.nidMoth}</span></td>
+            </tr>
 
+            <tr>
 
-    <div class='col-xs-3 col-sm-6 col-md-4 col-lg-3'>
-        <div>${birthRegistration.presentAdd}</div>
-    </div>
+                <td colspan="1"></td>
+                <td  colspan="3" width="25%" style="text-align:left;"><span>${birthRegistration.fathersName}</span></td>
 
+            </tr>
 
+            <tr>
+                <td colspan="3" style="text-align:left;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>${birthRegistration.nidFath}</span></td>
 
+            </tr>
+            <tr>
 
-    <%---///--%>
+                <td colspan="1"></td>
+                <td colspan="3" width="25%" style="text-align:left;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>${birthRegistration.presentAdd}</span></td>
 
-    <div class="row form-group"></div>
-    <div class='col-xs-3 col-sm-6 col-md-4 col-lg-3'></div>
+            </tr>
 
+            <tr>
 
-    <div class='col-xs-3 col-sm-1 col-md-1 col-lg-3'>
-        <div>${birthRegistration.permanentAdd}</div>
-    </div>
+                <td colspan="1"></td>
+                <td colspan="3" width="25%" style="text-align:left;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>${birthRegistration.permanentAdd}</span></td>
 
+            </tr>
 
-
+    </table>
 </div>
+
 
 
 
