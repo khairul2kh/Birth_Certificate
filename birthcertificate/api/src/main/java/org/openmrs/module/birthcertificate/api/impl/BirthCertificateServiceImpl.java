@@ -73,6 +73,13 @@ public class BirthCertificateServiceImpl extends BaseOpenmrsService implements B
        return dao.listBirthRegistration(id);
     }
 
+    @Override
+    public List<BirthRegistration> searchByIdName(String searchKey) throws APIException {
+        return dao.searchByIdName(searchKey);
+    }
+
+   
+
 
     
 }

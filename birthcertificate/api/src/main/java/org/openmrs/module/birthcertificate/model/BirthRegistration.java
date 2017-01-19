@@ -12,6 +12,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.Temporal;
 import org.openmrs.User;
 import org.hibernate.validator.constraints.NotEmpty;
 
@@ -30,10 +31,12 @@ public class BirthRegistration {
     @NotEmpty
     @Column(unique=false, nullable=false)
     private String memoNo;
+    @Temporal(javax.persistence.TemporalType.DATE)
     private Date date;
     private String registrationNo;
     private String name;
     private String sex;
+    @Temporal(javax.persistence.TemporalType.DATE)
     private Date dateOfBirth;
     private String timeOfBirth;
     private String mothersName;
@@ -43,6 +46,7 @@ public class BirthRegistration {
     private String presentAdd;
     private String permanentAdd;
     private User creator;
+    @Temporal(javax.persistence.TemporalType.DATE)
     private Date createdDate;
 
     public int getId() {

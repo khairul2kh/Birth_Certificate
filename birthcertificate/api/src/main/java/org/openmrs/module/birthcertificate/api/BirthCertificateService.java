@@ -28,7 +28,7 @@ public interface BirthCertificateService extends OpenmrsService {
 
     public void removebirthCertificate(BirthRegistration birthRegistration) throws APIException;
 
-   public BirthRegistration getBirthRegById(Integer id) throws APIException;
+    public BirthRegistration getBirthRegById(Integer id) throws APIException;
 
-
+    public List<BirthRegistration> searchByIdName(String searchKey)throws APIException;
 }

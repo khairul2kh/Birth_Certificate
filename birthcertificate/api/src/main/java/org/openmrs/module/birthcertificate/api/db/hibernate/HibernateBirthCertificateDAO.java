@@ -17,6 +17,8 @@ import java.util.List;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.hibernate.Criteria;
+import org.hibernate.Query;
+import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.criterion.Restrictions;
 import org.openmrs.api.db.DAOException;
@@ -73,6 +75,21 @@ public class HibernateBirthCertificateDAO implements BirthCertificateDAO {
     @Override
     public void removebirthCertificate(BirthRegistration birthRegistration) throws DAOException {
         sessionFactory.getCurrentSession().delete(birthRegistration);
+    }
+
+    @Override
+    public List<BirthRegistration> searchByIdName(String searchKey) throws DAOException {
+        String hql="from BirthRegistration b where b.registrationNo LIKE '%"
+                + searchKey
+                + "%' "
+                + "OR b.name LIKE '%"+ searchKey + "%')";
+       Session session=sessionFactory.getCurrentSession();
+       Query q=session.createQuery(hql);
+       q.setFirstResult(0);
+       q.setMaxResults(50);
+       List<BirthRegistration> list=q.list();
+       return list;
+       
     }
 
 

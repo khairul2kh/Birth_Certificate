@@ -80,7 +80,7 @@
     </head>
     <script>
         if (SESSION.checkSession()) {
-            jQuery(document).ready(function () {
+            jQuery(document).ready(function() {
 
             });
         }
@@ -93,12 +93,15 @@
                 data: ({
                     searchKey: searchKey
                 }),
-                success: function (data) {
+                success: function(data) {
                     jQuery("#searchResult").html(data);
                 },
             });
         }
         ;
+        function edit(id) {
+            window.location.href = openmrsContextPath + "/module/birthcertificate/edit.form?id=" + id;
+        }
     </script>
     <body ng-app  class="ng-cloak tdn">
 
@@ -164,7 +167,7 @@
                                     </span>
                                 </div>
                             </div>								
-                            
+
                         </div>							 
                     </div><!-- /.row -->
 

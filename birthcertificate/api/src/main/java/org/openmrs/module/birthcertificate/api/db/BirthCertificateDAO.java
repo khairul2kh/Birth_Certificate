@@ -29,8 +29,8 @@ public interface BirthCertificateDAO {
 
     public void removebirthCertificate(BirthRegistration birthRegistration) throws DAOException;
 
-    
-
     public BirthRegistration getBirthRegById(Integer id) throws DAOException;
+    
+    public List<BirthRegistration> searchByIdName(String searchKey)throws DAOException;
 
 }
