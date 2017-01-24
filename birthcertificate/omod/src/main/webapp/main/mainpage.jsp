@@ -69,11 +69,24 @@
                 width:100%;
             }
         </style>
+        <script type="text/javascript"
+        src="${pageContext.request.contextPath}/moduleResources/birthcertificate/dt/bootstrap-datetimepicker.js" charset="UTF-8"></script>
+
+        <link type="text/css" rel="stylesheet"
+              href="${pageContext.request.contextPath}/moduleResources/birthcertificate/dt/bootstrap-datetimepicker.min.css"/>
     </head>
     <script>
         if (SESSION.checkSession()) {
             jQuery(document).ready(function () {
-
+                $('.form_date').datetimepicker({
+                    weekStart: 1,
+                    todayBtn: 1,
+                    autoclose: 1,
+                    todayHighlight: 1,
+                    startView: 2,
+                    minView: 2,
+                    forceParse: 0
+                });
             });
         }
     </script>
@@ -124,6 +137,9 @@
             <div class="panel panel-default">
                 <div class="panel-heading"><span class="lead">Birth Certificate Entry Form </span></div>
                 <div class="formcontainer">
+                    
+                    <input type="text" data-date-format="mm/dd/yyyy" data-link-field="dtp_input2" data-link-format="mm/dd/yyyy" id="date" class="form_date" value="" /> 
+                    
                     <form name="myForm" action="main.form" class="form-horizontal" method="POST" >
                         <div class="row">
                             <div class="form-group col-md-12">
